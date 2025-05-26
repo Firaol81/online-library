@@ -1,0 +1,129 @@
+		<!DOCTYPE html>
+		<html lang="en">
+		<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width, initial-scale=1.0">
+		<title>FNB Library</title>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+		<!-- Custom css file link -->
+
+
+		<link href="books.css" rel="stylesheet">
+		</head>
+		<body>
+
+		  <!--header section Starts--->
+  <header class="header">
+
+    <!-- Hamburger Menu -->
+    <div class="container" onclick="toggleMenu()">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+	
+	  <!-- Mobile Dropdown Menu -->
+    <ul class="menu-list" id="dropdownMenu">
+      <li><a href="books.html">Home</a></li>
+      <li><a href="featured.php">Featured</a></li>
+      <li><a href="Review.html">Reviews</a></li>
+      <li><a href="About.html">About</a></li>
+    </ul>
+
+    <!-- Desktop Navigation and  Logo -->
+    <nav class="header-1">
+      <a href="#" class="logo">̷𝐅̷𝐍̷𝐁 ̷𝐋̷𝐈̷𝐁̷𝐑̷𝐀̷𝐑̷𝐘</a> 
+      <div class="icons">
+        <div id="search-btn" class="fas fa-search"></div>
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-shopping-cart"></a>
+        <div id="login-btn" class="fas fa-user"></div>
+      </div>
+    </nav>
+
+    <!-- Nav to (For Desktop) -->
+    <div class="header-2">
+      <nav class="navbar">
+        <a href="books.html">Home</a>
+        <a href="featured.php">Featured</a>
+        <a href="Review.html">Reviews</a>
+        <a href="About.html">About</a>
+      </nav>
+    </div>
+
+  </header>
+
+		<!-- header section ends-->
+
+		<div class="login-form-container">
+
+			<div id="close-login-btn" class="fas fa-times"></div>
+			
+			<form action="">
+				<h3>sign in</h3>
+				<span>username</span>
+				<input type="email" name=""class="box" placeholder="enter your email" id="">
+				
+				<span>password</span>
+				<input type="password" name="" class="box" placeholder="enter your password" id="">
+				<div class="checkbox">
+					<input type="checkbox" name="" id="remember-me">
+					<label for="remember-me"> Remember me</label>
+				</div>
+				<input type="submit" value="SIGN IN" class="btn">
+				<p>forget password? <a href="#">click here</a></p>
+				<p>don't have any account? <a href="#">create one</a></p>
+				<a href=""></a>
+				
+			</form>
+		</div> 
+
+		<!--home Section Starts-->
+		<section class="home" id="home">
+			<div class="row">
+				<div class="content">
+					<h3> TIME TO READ A BOOK!</h3>
+					<p>Choose any book and enjoy!.</p>
+				</div>
+				<div class="swiper books-slider">
+					<div class="swiper-wrapper">
+						<a href="GreatGatsby/The Great Gatsby.html" class="swiper-slide"><img src="image/book4.png" alt=""></a>
+						<a href="#" class="swiper-slide"><img src="image/book3.png" alt=""></a>
+						<a href="#" class="swiper-slide"><img src="image/book4.png" alt=""></a>
+						<a href="#" class="swiper-slide"><img src="image/book3.png" alt=""></a>
+						<a href="#" class="swiper-slide"><img src="image/book4.png" alt=""></a>
+					</div>
+					<img src="stand.png" class="stand" alt="">
+				</div>
+			</div>
+		</section>
+		
+		
+	<!-- FOOTER-->
+	
+	<footer class="footer">
+    <div class="footer-content">
+       
+        <p>Follow us on:
+		    <a href="https://www.youtube.com/@firaol81" target="_blank">YouTube</a> |
+		    <a href="https://www.tiktok.com/@firaol.nebi?is_from_webapp=1&sender_device=pc" target="_blank">Tiktok</a> |
+            <a href="https://www.facebook.com/Firaol81/" target="_blank">Facebook</a> |
+            <a href="https://www.instagram.com/firaol_81/" target="_blank">Instagram</a> |
+        </p>
+		 <p>&copy; 2024 FNB Studio.</p>
+    </div>
+ 
+
+		<!-- Review start -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+		<!-- Custom Js file link -->
+		<script src="script.js"></script>
+		</body>
+	</html>

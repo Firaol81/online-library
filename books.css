@@ -1,0 +1,475 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500;600&family=Sono:wght@200;300;400;600&display=swap');
+
+:root{
+	--red:#27ae60;
+	--dark-color: #219150;
+	--black: #444;
+	--light-color: #777;
+	--border: .1rem solid rgba(0,0,0,.1);
+	--border-hover:.1rem solid var(--black);
+	-box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+*{
+	
+font-family: 'Oswald', sans-serif;
+font-family: 'Sono', sans-serif;
+margin:0; 
+padding:0;
+box-sizing: border-box;
+outline: none; 
+border:none;
+text-decoration:none;
+text-transform:capitalize;
+transition:all .2s linear;
+transition:width none;
+}
+
+
+html{
+	font-size: 55%;
+	overflow-x: hidden;
+	scroll-padding-top: 5rem;
+	scroll-behavior: smooth;
+	
+}
+html::-webkit-scrollbar{
+	width: 1rem;
+}
+html::-webkit-scrollbar-track{
+	background:transparent;
+}
+html::-webkit-scrollbar-thumb {
+	background:var(--black);
+}
+
+section {
+	padding: 5rem 9%;
+}
+
+
+
+.heading{
+	text-align: center;
+	margin-bottom: 2rem;
+	position: relative;
+	
+}
+
+.heading::before{
+	content: '';
+	position: absolute;
+	top: 50%; left:0;
+	transform:translateY(-50%);
+	width: 100%;
+	height: .01rem;
+	background: rgba(0,0,0,.1);
+	z-index: -1;
+}
+
+.heading span{
+	font-size: 3rem;
+	padding: 5rem 2rem;
+	color:var(--black);
+	border:var(--border);
+}
+
+.btn{
+	margin-top: 1rem;
+	display: inline-block;
+	padding: .9rem 3rem;
+	border-radius: .5rem;
+	color: #fff;
+	background:linear-gradient(to right, #7FFF00, #48D1CC);
+	font-size: 1.7rem;
+	cursor: pointer;
+	font-weight:500;
+}
+
+.btn:hover{
+	background:var(--dark-color);
+}
+
+/* Hamburger icon styles */
+.container {
+  display: none; /* Hide by default */
+  cursor: pointer;
+  width: 30px;
+  height: 15px;
+  position: relative;
+
+}
+
+.bar1, .bar2, .bar3 {
+  width: 100%;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+  
+  
+}
+/* Mobile dropdown menu */
+.menu-list {
+  display: none;
+  position: absolute;
+  top: 70px; /* Position below the hamburger icon */
+  left: 0;
+  width: 35%; /* Takes up a portion of the screen width */
+  background: linear-gradient(to right, #7FFF00, #48D1CC); /* Matches header background */
+  list-style: none;
+  margin: 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.menu-list li {
+  padding: 15px 20px; /* Spacious clickable area */
+  text-align: left; /* Align text to the left */
+}
+
+.menu-list li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.6rem;
+  display: block;
+}
+
+.menu-list li:hover {
+  background-color: var(--dark-color); /* Change to dark color on hover */
+}
+
+/* Show the dropdown menu when active */
+.menu-list.active {
+  display: block;
+}
+
+
+
+
+.header {
+	background:linear-gradient(to right, #7FFF00, #48D1CC);
+}
+.header .header-1{
+	
+	padding:1.5rem 10%; 
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header .header-1 .logo{
+	font-size: 2.5rem;
+	font-weight: bolder;
+	color:var(--black);
+}
+.header .header-1 .logo i{
+	color:#b78727;
+}
+.header .header-1 a{
+	padding:5px;
+	text-align: center;
+	margin-left: 20px;
+}
+
+
+
+.header .header-1 .search-form label:hover{
+	color:#b78727;
+}
+
+.header .header-1 .icons div,
+	.header .header-1 .icons a{
+		font-size:2.5rem;
+		margin-left: 1.5rem;
+		color: var(--black);
+		cursor:pointer;
+	}
+
+	.header .header-1 .icons div:hover,
+	.header .header-1 .icons a:hover{
+		color:#b78727;
+	}
+
+	#search-btn{
+		display: none;
+	}
+
+.header .header-2{
+	background:linear-gradient(to right, #7FFF00, #48D1CC);
+	
+}
+.header .header-2 .navbar{
+	text-align: center;
+}
+.header .header-2 .navbar a{
+	color:black;
+	display:inline-block;
+	padding:1.5rem;
+	font-size: 3rem;
+}
+
+.header .header-2 .navbar a:hover{
+	background-color: var(--dark-color);
+}
+
+
+
+.login-form-container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background:rgba(255,255,255,.9);
+	position:fixed;
+	top:0; right:-105%;
+	z-index:10000;
+	height:100%;
+	width:100%
+	
+}
+
+
+.login-form-container.active{
+	right:0;
+}
+
+.login-form-container form{
+	
+	background:#fff;
+	border:var(--border);
+	width:40rem;
+	padding:2rem;
+	box-shadow:var(--box-shadow);
+	border-radius: .5rem;
+	margin:2rem;
+}
+
+.login-form-container form h3{
+	font-size: 2.5rem;
+	text-decoration: uppercase;
+	color:var(--black);
+	text-align: center;
+}
+.login-form-container form span{
+	display:block;
+	font-size: 1.5px;
+	padding-top: 1rem;
+	
+}
+
+.login-form-container form .box{
+	margin:.7rem 0;
+	font-size: 1.6rem;
+	border:var(--border);
+	border-radius: .5rem;
+	padding:1rem 1.2rem;
+	color:var(--black);
+	text-transform: none;
+}
+
+.login-form-container form .checkbox{
+	display:flex;
+	align-items:center;
+	gap: .5rem;
+	padding:1rem 0;
+}
+
+.login-form-container form ,checkbox label{
+	font-size: 1.5rem;
+	color:var(--light-color);
+	cursor: pointer;
+}
+
+.login-form-container form .btn{
+	text-align:center;
+	width: 100%;
+	margin: 1.5rem 0;
+}
+.login-form-container form p{
+	padding-top: .8rem;
+	color: var(--light-color);
+	font-size: 1.1.5rem;
+	
+}
+
+.login-form-container form p a{
+	color:blue;
+	text-decoration: underline;
+}
+
+.login-form-container #close-login-btn{
+	position:absolute;
+	top:1.5rem; right: 2.5rem;
+	font-size: 5rem;
+	color:var(--black);
+	cursor: pointer;
+} 
+.home {
+  background: url("back1.png") no-repeat center center;
+  background-size: cover;  /* Ensures the image covers the whole background */
+  height: 100vh;           /* Ensures the section takes up the full viewport height */
+  width: 100%;             /* Ensures the background covers the full width */
+}
+.home .row {
+	display:flex;
+	align-items:center;
+	flex-wrap: wrap;
+	gap:1.5rem;
+}
+
+.home .row .content{
+	flex:1 1 42rem;
+}
+
+.home .row .books-slider{
+	flex:1 1 42rem;
+	text-align:center;
+	margin-top: 2rem;
+}
+
+.home .row .books-slider a img{
+	height: 25rem;
+}
+
+.home .row .books-slider a:hover img{
+	transform: scale(.9);
+}
+
+.home .row .books-slider .stand{
+	width:100%;
+	margin-top:-4rem;
+}
+
+.home .row .content h3{
+	color:var(--black);
+	font-size: 4.5rem;
+	text-align:center;
+}
+
+.home .row .content p{
+	color:var(--light-color);
+	font-size: 2rem;
+	line-height:2;
+	padding: 1rem 0;
+	text-align:center;
+}
+
+.icons-container{
+	display: grid;
+	grid-template-columns:repeat(auto-fit, minmax(25rem, 1fr));
+	gap: 1.5rem;
+}
+
+.icons-container .icons{
+	display: flex;
+	align-items: center;
+	gap:1.5rem;
+	padding: 2rem 0;
+}
+
+.icons-container .icons i{
+	font-size: 2.5rem;
+	color: blue;
+}
+
+.icons-container .icons h3{
+	font-size: 2.2rem;
+	color: var(--black);
+	padding-bottom: .5rem;
+}
+.icons-container .icons p{
+	font-size: 1.3rem;
+	color: var(--light-color);
+}
+
+
+
+.swiper-button-next,
+.swiper-button-prev{
+	border:var(--border-hover);
+	height:4rem;
+	width:4rem;
+	color: var(--black);
+	background:#fff;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after{
+	font-size:2rem;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
+	background: var(--black);
+	color: #fff;
+}
+
+/* Footer styling */
+.footer {
+    background: linear-gradient(to right, #7FFF00, #48D1CC);
+    color: black;
+    text-align: center;
+    padding: 2rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -0.2rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+/* Footer content styling */
+.footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer p {
+	   color: black;
+	   font-weight: bold;
+	   padding: 1rem;  
+       font-size: 1.5rem
+}
+/* Footer links styling */
+.footer a {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1rem;  /* Increase padding for more space around the text */
+    font-size: 1.2rem;  /* Increase font size to make the text bigger */
+    transition: all 0.3s ease;  /* Smooth transition for hover effects */
+}
+
+.footer a:hover {
+    color: #f1f1f1;  /* Slight color change on hover for better interaction */
+    text-decoration: underline;  /* Add underline on hover for emphasis */
+}
+	
+
+
+/* Hide the search form on mobile */
+@media (max-width: 768px) {
+	
+  .home {
+    background: url("back1.png") no-repeat center center;
+    background-size: cover;  /* Full background image on mobile */
+    height: 100vh;           /* Full height on mobile */
+  }
+  .container {
+    display: block;
+  }
+  .header-1 .search-form {
+    display: none !important;
+  }
+  .header .header-2 {
+	  display: none;
+  }
+  .footer {
+        display: block; /* Keeps footer visible on mobile */
+    }
+	
+	.header-2 .navbar {
+    display: none;
+	}
+  
+
+
+}

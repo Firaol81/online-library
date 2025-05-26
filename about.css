@@ -1,0 +1,133 @@
+
+
+:root{
+	--green:#b78727;
+	--dark-color: #219150;
+	--black: #444;
+	--light-color: #777;
+	--border: .1rem solid rgba(0,0,0,.1);
+	--border-hover:.1rem solid var(--black);
+	-box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+*{
+	
+font-family: 'Oswald', sans-serif;
+font-family: 'Sono', sans-serif;
+margin:0; 
+padding:0;
+box-sizing: border-box;
+outline: none; 
+border:none;
+text-decoration:none;
+text-transform:capitalize;
+transition:all .2s linear;
+transition:width none;
+}
+
+
+html{
+	font-size: 65.5%;
+	overflow-x: hidden;
+	scroll-padding-top: 5rem;
+	scroll-behavior: smooth;
+	float:center;
+}
+
+/*  this is help to make background equal */
+section {
+	padding: 19rem 20%;
+}
+
+
+
+.header .header-2{
+	background:#b78727;
+}
+/* puting the nav in center */
+.header .header-2 .navbar{
+	text-align: center;
+}
+
+.header .header-2 .navbar a{
+	color:#fff;
+	display:inline-block;
+	padding:1.2rem;
+	font-size: 1.7rem;
+}
+
+.header .header-2 .navbar a:hover{
+	background:var(--dark-color);
+}
+
+
+
+
+
+/* here is  where I used the backgound  color */
+.home{
+	background: url("back1.png") no-repeat;
+	background-size: cover;
+	background-position: center;
+	
+}
+
+
+.home .row .content h3{
+	color:var(--black);
+	font-size: 4.5rem;
+	text-align:center;
+}
+
+.home .row .content p{
+	color: black;
+	font-size: 1.5rem;
+	line-height:2;
+	padding: 1rem 0;
+	text-align:center;
+}
+
+
+
+
+
+
+.swiper-button-next,
+.swiper-button-prev{
+	border:var(--border-hover);
+	height:4rem;
+	width:4rem;
+	color: var(--black);
+	background:#fff;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after{
+	font-size:2rem;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
+	background: var(--black);
+	color: #fff;
+}
+
+
+
+.botton-navbar{
+	text-align: center;
+	background: #b78727;
+	position: fixed;
+	bottom:0;
+	left:0;
+	right: 0;
+}
+
+.botton-navbar a{
+	font-size: 2.5rem;
+	padding: 2rem;
+	color: #fff;
+	
+}
+.botton-navbar a:hover{
+	background:var(--dark-color);
+}
+	
