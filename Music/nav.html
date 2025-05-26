@@ -1,0 +1,135 @@
+<!-- Navigation bar -->
+<nav class="navbar">
+  <!-- Logo -->
+  <div class="logo">
+    <a href="index.html"><img src="assets/logo/logo.png" alt="Logo" /></a>
+  </div>
+
+  <!-- Navbar Links -->
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="https://www.youtube.com">YouTube</a></li>
+    <li><a href="https://www.facebook.com">Facebook</a></li>
+    <li><a href="https://www.tiktok.com">TikTok</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+
+  <!-- Hamburger Icon for Mobile -->
+  <div class="hamburger" id="hamburger">
+    <i class="fas fa-bars"></i>
+  </div>
+</nav>
+
+<!-- Responsive Navigation Dropdown -->
+<div id="mobile-nav" class="mobile-nav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="https://www.youtube.com">YouTube</a></li>
+    <li><a href="https://www.facebook.com">Facebook</a></li>
+    <li><a href="https://www.tiktok.com">TikTok</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</div>
+
+<!-- Styles for the Navbar -->
+<style>
+  /* Base styles for the navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+  }
+
+  .navbar .logo img {
+    width: 100px;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0 15px;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  .nav-links a:hover {
+    color: #f0f0f0;
+  }
+
+  /* Hamburger Icon */
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+  }
+
+  /* Mobile Dropdown Navigation */
+  .mobile-nav {
+    display: none;
+    background-color: #333;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+  }
+
+  .mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobile-nav li {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .mobile-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+  }
+
+  .mobile-nav a:hover {
+    color: #f0f0f0;
+  }
+
+  /* Media Query for mobile screens */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+
+    .hamburger {
+      display: block;
+    }
+
+    .mobile-nav.active {
+      display: block;
+    }
+  }
+</style>
+
+<!-- JavaScript for Hamburger Menu Functionality -->
+<script>
+  // Get hamburger icon and mobile nav
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobile-nav');
+
+  // Toggle mobile nav visibility when hamburger is clicked
+  hamburger.addEventListener('click', () => {
+    mobileNav.classList.toggle('active');
+  });
+</script>

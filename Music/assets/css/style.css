@@ -1,0 +1,379 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  background-color: #000; /* Black background */
+  height: 100vh; /* Full height of the viewport */
+  width: 100vw; /* Full width of the viewport */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevent scrolling */
+  position: fixed; /* Fix the body position */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 5px; /* Reduced space at the top to move content up */
+}
+			/*SOCIAL MEDIA */
+				.social-links {
+				  position: fixed; /* Keep it on top */
+				  top: 10px; /* Position from the top of the page */
+				  left: 50%; /* Center horizontally */
+				  transform: translateX(-50%); /* Correctly center the icons by shifting back */
+				  display: flex; /* Align icons horizontally */
+				  gap: 20px; /* Space between the icons */
+				  z-index: 1000; /* Ensure icons are on top of other content */
+				}
+
+				.social-icon {
+				  width: 40px; /* Set the width of the icons */
+				  height: 40px; /* Set the height of the icons */
+				  transition: transform 0.3s ease-in-out; /* Smooth scaling on hover */
+				}
+
+				.social-icon:hover {
+				  transform: scale(1.2); /* Slightly enlarge the icons on hover */
+				}
+
+
+
+
+
+/* Search Container */
+.search-container {
+  margin-top: 50px; /* Space between logo and search container */
+  margin-bottom: 20px; /* Space below the search container */
+  text-align: center;
+}
+
+#search-bar {
+  width: 90%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 2px solid #83a9ff;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+#search-bar:focus {
+  border-color: #4286f4;
+  box-shadow: 0 0 10px rgba(66, 134, 244, 0.5);
+}
+
+#search-results {
+  list-style: none;
+  margin-top: 10px;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  text-align: left;
+  width: 90%;
+  margin: 10px auto 0;
+}
+
+#search-results li {
+  padding: 10px;
+  margin: 5px 0;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#search-results li:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+
+
+button {
+  background-color: #444;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+button i {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+/* Style the social media icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+.social-icons i {
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover i {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+
+
+/* Player Wrapper */
+.player {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%; /* Full height of the player container */
+}
+
+/* Wrapper Styling */
+.wrapper {
+  border: 2px solid #fff;
+  padding: 20px; /* Add padding inside the wrapper */
+  border-radius: 20px;
+  backdrop-filter: blur(30px);
+  background: rgba(0, 0, 0, 0.588);
+  width: 80%; /* Adjust to control width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px; /* Space below the logo */
+}
+
+/* Logo Styling */
+.logo img {
+  width: 150px; /* Adjust the size of the logo */
+  height: auto;
+  margin-bottom: 20px; /* Space below the logo */
+}
+.details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.track-art {
+  margin: 25px;
+  height: 200px;
+  width: 200px;
+  border: 2px solid #fff;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+.now-playing {
+  font-size: 0.9rem;
+  color: #fff;
+}
+.track-name {
+  font-size: 2.1rem;
+  color: #fff;
+}
+.track-artist {
+  margin-top: 5px;
+  font-size: 1.2rem;
+  color: #fff;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.active {
+  color: #000;
+}
+.repeat-track,
+.next-track,
+.playpause-track,
+.prev-track,
+.random-track {
+  padding: 15px;
+  color: #fff;
+}
+.slider_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.seek_slider,
+.volume_slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: #83a9ff;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+.seek_slider::-webkit-slider-thumb,
+.volume_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border: 2px solid #3774ff;
+  cursor: grab;
+  border-radius: 100%;
+}
+.seek_slider:hover,
+.volume_slider:hover {
+  opacity: 1;
+}
+.seek_slider {
+  width: 60%;
+}
+.volume_slider {
+  width: 30%;
+}
+.current-time,
+.total-duration {
+  padding: 10px;
+  color: #fff;
+}
+i.fa-volume-down,
+i.fa-volume-up {
+  padding: 10px;
+}
+i,
+i.fa-play-circle,
+i.fa-pause-circle,
+i.fa-step-forward,
+i.fa-step-backward,
+p {
+  cursor: pointer;
+  color: #fff;
+}
+.randomActive {
+  color: #fff;
+}
+
+/* Rotate Animation for Track Art */
+.rotate {
+  animation: rotation 8s infinite linear;
+}
+
+
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+/* Loader Styles */
+/* Loader Styles */
+.loader {
+  height: 40px; /* Reduced height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -10px; /* Move loader up by 10px */
+}
+
+.loader .stroke {
+  background: #f1f1f1;
+  height: 100%; /* Keep the height full relative to its container */
+  width: 6px; /* Reduced width */
+  border-radius: 50px;
+  margin: 0 3px; /* Reduced margin */
+  animation: animate 1.4s linear infinite;
+}
+
+@keyframes animate {
+  50% {
+    height: 20%;
+    background-color: #4286f4;
+  }
+  100% {
+    height: 100%;
+    background: #4286f4;
+  }
+}
+
+.stroke:nth-child(1) {
+  animation-delay: 0s;
+}
+.stroke:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.stroke:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.stroke:nth-child(4) {
+  animation-delay: 0.9s;
+}
+.stroke:nth-child(5) {
+  animation-delay: 0.6s;
+}
+.stroke:nth-child(6) {
+  animation-delay: 0.3s;
+}
+.stroke:nth-child(7) {
+  animation-delay: 0s;
+}
+
+
+/* Mobile Specific Styles */
+@media (max-width: 768px) {
+  body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+	 /* Search Container */
+	.search-container {
+	  margin: 10px 0;
+	  text-align: center;
+	}
+
+  #search-bar {
+  width: 90%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 2px solid #83a9ff;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+	}
+
+
+  .player {
+    height: 80vh;
+  }
+}

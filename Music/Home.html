@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/home.css" />
+    <title>Home Page</title>
+  </head>
+  <body>
+    <!-- Video Background -->
+    <div class="video-container">
+      <video autoplay muted loop id="bg-video">
+        <source src="assets/videos/ACHI_SOLOMON_ALAMU.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Navigation Bar -->
+   <nav>
+  <div class="logo">
+    <img src="assets/logo/logo.png" alt="FNB Studio Logo" />
+  </div>
+  <ul class="nav-links">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="YouTube/youtube.html">YouTube</a></li>
+    <li><a href="index.html">Music</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <div class="mobile-menu-icon">
+    <i class="fas fa-bars" onclick="toggleMobileMenu()"></i>
+  </div>
+</nav>
+
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-menu hidden" id="mobileMenu">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="artist.html">Artist</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 FNB Studio. All rights reserved.</p>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </footer>
+
+    <script>
+      function toggleMobileMenu() {
+        const mobileMenu = document.getElementById("mobileMenu");
+        mobileMenu.classList.toggle("hidden");
+        mobileMenu.classList.toggle("visible");
+      }
+    </script>
+  </body>
+</html>
