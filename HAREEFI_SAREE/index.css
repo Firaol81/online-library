@@ -1,0 +1,297 @@
+
+:root{
+	--red:#27ae60;
+	--dark-color: #219150;
+	--black: #444;
+	--light-color: #777;
+	--border: .1rem solid rgba(0,0,0,.1);
+	--border-hover:.1rem solid var(--black);
+	-box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+*{
+	
+font-family: 'Oswald', sans-serif;
+font-family: 'Sono', sans-serif;
+margin:0; 
+padding:0;
+box-sizing: border-box;
+outline: none; 
+border:none;
+text-decoration:none;
+text-transform:capitalize;
+transition:all .2s linear;
+transition:width none;
+}
+
+
+html{
+	font-size: 60%;
+	overflow-x: hidden;
+	scroll-padding-top: 5rem;
+	scroll-behavior: smooth;
+	
+}
+html::-webkit-scrollbar{
+	width: 1rem;
+}
+html::-webkit-scrollbar-track{
+	background:transparent;
+}
+html::-webkit-scrollbar-thumb {
+	background:var(--black);
+}
+
+
+.btn{
+	margin-top: 1rem;
+	display: inline-block;
+	padding: .9rem 3rem;
+	border-radius: .5rem;
+	color: #fff;
+	background:linear-gradient(to right, #7FFF00, #48D1CC);
+	font-size: 1.7rem;
+	cursor: pointer;
+	font-weight:500;
+}
+
+/* Icon for mobile version */
+/* Hamburger Menu */
+.container {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between; /* Adds space between lines */
+  width: 35px;
+  height: 25px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px; /* Pushes down */
+  left: 10px; /* Moves closer to the left */
+  background-color: linear-gradient(to right, #7FFF00, #48D1CC);
+  padding: 5px; /* Adds some padding around the icon */
+  border-radius: 5px; /* Rounded corners for a clean look */
+  z-index: 1000;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px; /* Wider lines */
+  height: 5px; /* Thicker lines */
+  background-color: Black; /* White lines for contrast */
+  border-radius: 20px; /* Rounds the edges */
+  transition: 0.5s;
+  padding: 3.20px;
+}
+
+/* Space between lines */
+.container .bar2 {
+  margin: 4px 0;
+}
+
+/* Mobile Dropdown Menu */
+.menu-list {
+  display: none;
+  position: absolute;
+  top: 70px; /* Position below the hamburger icon */
+  left: 0;
+  width: 35%; /* Takes up half the screen width */
+  background:linear-gradient(to right, #7FFF00, #48D1CC); /* Matches header background */
+  list-style: none;
+  margin: 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.menu-list li {
+  padding: 15px 20px; /* Spacious clickable area */
+  text-align: left; /* Align text to the left */
+}
+
+.menu-list li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.6rem;
+  display: block;
+}
+
+.menu-list li:hover {
+  background-color: var(--dark-color);
+}
+
+/* Show the dropdown menu when active */
+.menu-list.show {
+  display: block;
+}
+/* Humbergur done here */
+
+
+
+
+/* FNB Library Logo */
+.header .header-1{
+		background: linear-gradient(to right, #7FFF00, #48D1CC); /* green to light blue gradient */
+
+	padding:3rem 8%;
+    text-align: left;
+}
+/* FNB Library Logo */
+.header .header-1 .logo{
+	font-size: 3.8rem;
+    font-weight: bolder;
+    color: var(--black);
+    position: relative;
+    top: 1.9rem; /* Move the logo up by 0.5rem, adjust as needed */
+	Padding:  -2rem;
+}
+/* Home, Featured, Reviews fi about */
+.header .header-1{
+	background: linear-gradient(to right, #7FFF00, #48D1CC); /* green to light blue gradient */
+	
+}
+/* Home, Featured, Reviews fi about */ 
+.header .header-1 .navbar{
+	text-align: center;
+	width: 100%;
+
+}
+/* Home, Featured, Reviews fi about */
+.header .header-1 .navbar a{
+	 color: Black;
+     padding: 1.5rem;
+     text-align: center; /* Keep text centered within each link */
+     font-size: 2.5rem;
+}
+
+.header .header-1 .navbar a:hover{
+	background:#0000FF;
+}
+.home {
+	background:#fffafa;
+}
+
+/* Maqa Kitabichaa */
+.home .row .content h3{
+	color:var(--black);
+	font-size: 4.5rem;
+	text-align:center;
+	margin-bottom: 1rem;
+}
+
+
+
+.home .row .content {
+    width: 90%; /* Limits the content width */
+    max-width: 800px; /* Maximum width for better readability */
+    margin: 0 auto; /* Centers the content horizontally */
+    text-align: center; /* Ensures all text is centered */
+}
+
+.home .row .content p {
+    color: black;
+    font-size: 2rem;
+    line-height: 2;
+    padding: 1rem 0;
+    margin: 0 auto; /* Ensures paragraphs are centered */
+    max-width: 100%; /* Ensures text stays within content boundaries */
+    text-align: center; /* Centers text */
+}
+
+.image-container {
+  margin: 2rem 0;  /* Adds space between text and image */
+  border: 0.2rem solid var(--black); /* Border around the image */
+  padding: 1rem;  /* Padding inside the border */
+  display: inline-block; /* Keeps the image within the content flow */
+}
+
+.harree-image {
+  width: 100%;  /* Make image responsive */
+  max-width: 600px; /* Limit image size */
+  height: auto;  /* Maintain aspect ratio */
+  display: block;
+  margin:  auto;  /* Centers the image horizontally */
+}
+
+.home .row .content {
+    display: block;
+    padding: 20px; /* Adds padding for better spacing */
+}
+
+
+/* Footer styling */
+.footer {
+    background: linear-gradient(to right, #7FFF00, #48D1CC);
+    color: black;
+    text-align: center;
+    padding: 2rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -0.2rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+/* Footer content styling */
+.footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer p {
+	 color: black;
+	 font-weight: bold;
+	   padding: 1rem;  
+       font-size: 1.5rem
+}
+/* Footer links styling */
+.footer a {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1rem;  /* Increase padding for more space around the text */
+    font-size: 1.2rem;  /* Increase font size to make the text bigger */
+    transition: all 0.3s ease;  /* Smooth transition for hover effects */
+}
+
+.footer a:hover {
+    color: #f1f1f1;  /* Slight color change on hover for better interaction */
+    text-decoration: underline;  /* Add underline on hover for emphasis */
+}
+	
+	/* Hide the botton-navbar on desktop */
+@media (min-width: 769px) {
+  .botton-navbar {
+    display: none; /* Hides the nav on screens larger than 768px */
+  }
+   .footer {
+        display: block; /* Keeps footer visible on desktop */
+    }
+}
+	
+
+
+/* Hide the search form on mobile */
+@media (max-width: 768px) {
+  .header-1 .navbar {
+        display: none; /* Hides the navbar links on mobile */
+  }
+  .header .header-1 {
+        
+        padding: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Center content horizontally */
+        text-align: center; /* Center text */
+    }
+	
+	.container {
+		display: flex; /* Show hamburger menu on mobile */
+    }
+	 .menu-list li a {
+		 background: linear-gradient(to right, #7FFF00, #48D1CC);
+		 color:Black;
+	
+	/*footer */
+  .footer {
+        display: block; /* Keeps footer visible on mobile */
+    }
+
+
+}
